@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/goravel.png" alt="" width="150"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">My Inventory</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-sm mt-3">
+        <div class="row bg-white shadow-sm pb-3 pt-3 padding-left">
+            <div class="col-xl-1 mt-2">
+                <img src="images/pasfoto.jpg" width="110px" class="circle-image">
+            </div>
+            <div class="col-xl-4 padding-left2">
+                <h3>Muhammad Azwar Rasyid</h3>
+                <p>Full Stack Developer</p>
+                <div class="row">
+                    <div class="col-xl-2">
+                        <button type="button" class="btn btn-primary" id="myButton">Kontak</button>
+                    </div>
+                    <div class="col-xl-2 padding-left2">
+                        <button type="button" class="btn btn-outline-success">Resume</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 bordered-div">
+                <div class="row mb-1">
+                    <label class="col-xl-4">Availability</label>
+                    <label class="col">Full Time</label>
+                </div>
+                <div class="row mb-1">
+                    <label class="col-4">Usia</label>
+                    <label class="col">17</label>
+                </div>
+                <div class="row mb-1">
+                    <label class="col-4">Lokasi</label>
+                    <label class="col">Jakarta, Indonesia</label>
+                </div>
+                <div class="row mb-1">
+                    <label class="col-4">Pengalaman</label>
+                    <label class="col">2</label>
+                </div>
+                <div class="row">
+                    <label class="col-4">Email</label>
+                    <label class="col">azwarrasyid@gmail.com</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 bg-white shadow-sm">
+            <form class="mt-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nama</label>
+                    <input type="nama" id="nama" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Role</label>
+                    <input type="role" id="role" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Avaibility</label>
+                    <input type="avaibility" id="avaibility" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Age</label>
+                    <input type="age" id="age" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Lokasi</label>
+                    <input type="lokasi" id="lokasi" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Years Experience</label>
+                    <input type="years" id="years" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="d-grid mx-auto pb-3">
+                    <button class="btn btn-success" onclick="showSummary()" type="button">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- </div> -->
+
+    <script>
+        function showSummary() {
+            // Get input values
+            var name = document.getElementById('nama').value;
+            var email = document.getElementById('email').value;
+            var age = document.getElementById('age').value;
+            var role = document.getElementById('role').value;
+            var lokasi = document.getElementById('lokasi').value;
+            var years = document.getElementById('years').value;
+
+            // Create a summary string
+            var summary = "Nama: " + name + "\nRole: " + role + "\nEmail: " + email + 
+            "\nAge: " + age + "\nYears: " + years +"\nLokasi: " + lokasi;
+
+            // Display the summary in an alert
+            alert("Input Summary:\n\n" + summary);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
