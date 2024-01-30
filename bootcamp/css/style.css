@@ -1,0 +1,20 @@
+.bg-white{
+    background-color: white;
+}
+
+.circle-image{
+    clip-path: circle();
+}
+
+.padding-left{
+    padding-left: 20px;
+}
+
+.padding-left2{
+    padding-left: 30px;
+}
+
+.bordered-div {
+    border-left: 0.5px solid #d3d3d3; /* You can customize the color and width of the border */
+    padding-left: 40px; /* Optional: Add padding to the content inside the div */
+  }
