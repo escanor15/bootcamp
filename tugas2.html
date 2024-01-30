@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/goravel.png" alt="" width="150"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item padding-left">
+                            <a class="nav-link" href="#">My Inventory</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-sm mt-3">
+        <div class="row bg-white shadow-sm pb-3 pt-3 padding-left">
+            <div class="col-xl-1 mt-2">
+                <img src="images/pasfoto.jpg" width="110px" class="circle-image">
+            </div>
+            <div class="col-xl-4 padding-left2">
+                <h3>Muhammad Azwar Rasyid</h3>
+                <p>Full Stack Developer</p>
+                <div class="row">
+                    <div class="col-xl-2">
+                        <button type="button" class="btn btn-primary" id="myButton">Kontak</button>
+                    </div>
+                    <div class="col-xl-2 padding-left2">
+                        <button type="button" class="btn btn-outline-success">Resume</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 bordered-div">
+                <div class="row mb-1">
+                    <label class="col-xl-4">Availability</label>
+                    <label class="col">Full Time</label>
+                </div>
+                <div class="row mb-1">
+                    <label class="col-4">Usia</label>
+                    <label class="col">17</label>
+                </div>
+                <div class="row mb-1">
+                    <label class="col-4">Lokasi</label>
+                    <label class="col">Jakarta, Indonesia</label>
+                </div>
+                <div class="row mb-1">
+                    <label class="col-4">Pengalaman</label>
+                    <label class="col">2</label>
+                </div>
+                <div class="row">
+                    <label class="col-4">Email</label>
+                    <label class="col">azwarrasyid@gmail.com</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2 class="mt-4">Simple Kalkulator</h2>
+        </div>
+
+        <div class="row mt-3 bg-white shadow-sm">
+            <form class="mt-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Bilangan 1</label>
+                    <input type="text" id="bil1" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Bilangan 2</label>
+                    <input type="text" id="bil2" class="form-control">
+                </div>
+                <div class="mx-auto pb-3">
+                    <button class="btn btn-success" onclick="tambah()" type="button">Tambah</button>
+                    <button class="btn btn-success" onclick="kurang()" type="button">Kurang</button>
+                    <button class="btn btn-success" onclick="bagi()" type="button">Bagi</button>
+                    <button class="btn btn-success" onclick="kali()" type="button">Kali</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <h2 class="mt-4">Password Authenticator</h2>
+        </div>
+
+        <div class="row mt-3 bg-white shadow-sm">
+            <form class="mt-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Masukan Username</label>
+                    <input type="text" id="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Masukan Password</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+                <div class="mx-auto pb-3">
+                    <button class="btn btn-success" onclick="login()" type="button">Login</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <h2 class="mt-4">Segitiga Bintang Siku2</h2>
+        </div>
+
+        <div class="row mt-3 bg-white shadow-sm">
+            <form class="mt-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Masukan Jumlah</label>
+                    <input type="number" id="jumlah" class="form-control">
+                </div>
+                <div class="mx-auto pb-3">
+                    <button class="btn btn-success" onclick="buatSegitiga()" type="button">Tampilkan</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <pre id="hasil"></pre>
+
+        <div class="row">
+            <h2 class="mt-4">Segitiga Bintang Sama Sisi</h2>
+        </div>
+
+        <div class="row mt-3 bg-white shadow-sm">
+            <form class="mt-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Masukan Jumlah</label>
+                    <input type="number" id="jumlah" class="form-control">
+                </div>
+                <div class="mx-auto pb-3">
+                    <button class="btn btn-success" onclick="buatSegitigaSamaSisi()" type="button">Tampilkan</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <pre id="hasil2"></pre>
+
+        <div class="row">
+            <h2 class="mt-4">Reverse</h2>
+        </div>
+
+        <div class="row mt-3 bg-white shadow-sm">
+            <form class="mt-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Masukan Kata</label>
+                    <input type="text" id="kataInput" class="form-control">
+                </div>
+                <div class="mx-auto pb-3">
+                    <button class="btn btn-success" onclick="reverseWord()" type="button">Tampilkan</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <pre id="hasil3"></pre>
+    </div>
+    <!-- </div> -->
+
+    <script>
+        function tambah() {
+            // Get input values
+            let total = 0;
+            let bil1 = 0;
+            let bil2 = 0;
+
+            bil1 = document.getElementById('bil1').value;
+            bil2 = document.getElementById('bil2').value;
+
+            // Create a summary string
+            total = parseInt(bil1) + parseInt(bil2);
+
+            // Display the summary in an alert
+            alert("Hasil Penjumlahan : " + total);
+        }
+
+        function kurang() {
+            // Get input values
+            let total = 0;
+            let bil1 = 0;
+            let bil2 = 0;
+
+            bil1 = document.getElementById('bil1').value;
+            bil2 = document.getElementById('bil2').value;
+
+            // Create a summary string
+            total = parseInt(bil1) - parseInt(bil2);
+
+            // Display the summary in an alert
+            alert("Hasil Pengurangan : " + total);
+        }
+
+        function bagi() {
+            // Get input values
+            let total = 0;
+            let bil1 = 0;
+            let bil2 = 0;
+
+            bil1 = document.getElementById('bil1').value;
+            bil2 = document.getElementById('bil2').value;
+
+            // Create a summary string
+            total = parseFloat(bil1) / parseFloat(bil2);
+
+            // Display the summary in an alert
+            alert("Hasil Pembagian : " + total);
+        }
+
+        function kali() {
+            // Get input values
+            let total = 0;
+            let bil1 = 0;
+            let bil2 = 0;
+
+            bil1 = document.getElementById('bil1').value;
+            bil2 = document.getElementById('bil2').value;
+
+            // Create a summary string
+            total = parseInt(bil1) * parseInt(bil2);
+
+            // Display the summary in an alert
+            alert("Hasil Pengkalian : " + total);
+        }
+
+        function login() {
+            // Get input values
+            let username = "admin";
+            let password = "password";
+
+            let userinput;
+            let passinput;
+
+            userinput = document.getElementById('username').value;
+            passinput = document.getElementById('password').value;
+
+            if (userinput == username && passinput == password) {
+                alert("Success");
+                window.location.href = 'tugas.html';
+            } else {
+                alert("Gagal");
+                window.location.href = 'https://www.google.com';
+            }
+        }
+
+        function buatSegitiga() {
+            // Ambil nilai tinggi dari input
+            var tinggi = document.getElementById('jumlah').value;
+
+            // Validasi tinggi
+            if (tinggi < 1) {
+                alert("Tinggi harus lebih dari 0");
+                return;
+            }
+
+            // Buat segitiga siku
+            var segitiga = '';
+            for (var i = 1; i <= tinggi; i++) {
+                var baris = '';
+                for (var j = 1; j <= tinggi; j++) {
+                    if (j < tinggi - i + 1) {
+                        baris += ' ';
+                    } else {
+                        if (tinggi % 2 == 0) {
+                            if (j % 2 == 0) {
+                                baris += '*';
+                            } else {
+                                baris += '#';
+                            }
+                        } else {
+                            if (j % 2 == 0) {
+                                baris += '#';
+                            } else {
+                                baris += '*';
+                            }
+                        }
+                    }
+                }
+                segitiga += baris + '\n';
+            }
+
+            // Tampilkan hasil di elemen dengan id 'hasil'
+            document.getElementById('hasil').textContent = segitiga;
+        }
+
+        function buatSegitigaSamaSisi() {
+            // Ambil nilai tinggi dari input
+            var tinggi = document.getElementById('jumlah').value;
+
+            // Validasi tinggi
+            if (tinggi < 1) {
+                alert("Tinggi harus lebih dari 0");
+                return;
+            }
+
+            // Buat segitiga sama sisi
+            var segitiga = '';
+            for (var i = 1; i <= tinggi; i++) {
+                var baris = '';
+                for (var j = 1; j <= tinggi - i; j++) {
+                    baris += ' ';
+                }
+                for (var k = 1; k <= 2 * i - 1; k++) {
+                    baris += '*';
+                }
+                segitiga += baris + '\n';
+            }
+
+            // Tampilkan hasil di elemen dengan id 'hasil'
+            document.getElementById('hasil2').textContent = segitiga;
+        }
+
+        function reverseWord() {
+            var kata = document.getElementById('kataInput').value;
+
+            var arr = kata.split('');
+
+            // for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr.length % 2 == 0) {
+                        var temp = arr[j];
+                        arr[j] = arr[arr.length - j];
+                        arr[arr.length - j] = temp;
+                    }
+                }   
+            // }
+            var finalString = arr.join('');
+            // console.log(arr[a]);
+            
+            // Tampilkan hasil di elemen dengan id 'hasil'
+            document.getElementById('hasil3').textContent = finalString;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
